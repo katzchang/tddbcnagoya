@@ -1,2 +1,10 @@
 .omakedb
 .omakedb.lock
+*.cm[ioxa]
+*.cmxa
+*~
+*.o
+*.opt
+*.a
+*.omc
+src/main
