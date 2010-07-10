@@ -9,3 +9,4 @@ let get store key =
 let set store key value = 
   (key,value) :: store
 
+let dump store = ""

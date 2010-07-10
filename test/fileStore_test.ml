@@ -11,4 +11,7 @@ let _ = run_test_tt_main begin "fileStore.ml" >::: [
     in
     assert_equal (Some "fuga") (get store "keyfuga")
   end;
+  "空をdumpすると空文字がかえる" >:: begin fun () ->
+    assert_equal "" (dump empty)
+  end;
 ] end
