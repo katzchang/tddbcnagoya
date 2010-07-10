@@ -7,6 +7,11 @@ let get store key =
     None
 
 let set store key value = 
-  (key,value) :: store
+  (key, value) :: store
 
-let dump store = ""
+let dump store = 
+  let f s (a,b) = a ^ ":" ^ b ^ "\n" ^ s
+  in
+  List.fold_left f "" store
+
+
