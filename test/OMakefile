@@ -2,7 +2,7 @@
 OCAMLINCLUDES += ../src
 
 FILES[] =
-	fact_test
+	fileStore_test
 
 OCAMLPACKS[] =
 	oUnit

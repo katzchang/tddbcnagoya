@@ -1,7 +1,7 @@
 .PHONY: all clean
 
 FILES[] =
-	fact
+	fileStore
 	main
 
 LIB = target
