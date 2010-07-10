@@ -7,4 +7,6 @@
 *.opt
 *.a
 *.omc
+#*
+.#*
 src/main
