@@ -26,5 +26,9 @@ let _ = run_test_tt_main begin "fileStore.ml" >::: [
   "複数setできる" >:: begin fun () ->
     assert_equal ~printer:Std.dump "A:a\nB:b\n" (dump (set_multi empty [("A","a"); ("B","b")]))
   end;
+  "複数getできる" >:: begin fun () ->
+    let store = set_multi empty [("A","a"); ("B","b")] in
+    assert_equal ~printer:Std.dump [("A","a"); ("B","b")] (get_multi store ["A";"B"])
+  end;
 ] end
 
