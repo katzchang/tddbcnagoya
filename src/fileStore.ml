@@ -10,8 +10,8 @@ let set store key value =
   (key, value) :: store
 
 let dump store = 
-  let f s (a,b) = a ^ ":" ^ b ^ "\n" ^ s
-  in
-  List.fold_left f "" store
+  List.fold_left (fun s (a,b) -> a ^ ":" ^ b ^ "\n" ^ s) "" store
 
+let set_multi store l = 
+  List.fold_left (fun st (k,v) -> set st k v) store l
 
