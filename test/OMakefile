@@ -6,6 +6,7 @@ FILES[] =
 
 OCAMLPACKS[] =
 	oUnit
+	extlib
 
 PROGRAM = test
 OCAML_LIBS += ../src/target
